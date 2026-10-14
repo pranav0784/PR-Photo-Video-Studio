@@ -1,13 +1,13 @@
 {
-  "name": "quantum-ai-studio",
+  "name": "quantum-ai-ultra-studio",
   "version": "1.0.0",
-  "description": "Next-Gen AI Photo & Video Studio App",
+  "description": "Next-Gen AI Photo, Video, Number Plate Eraser & Reels Studio",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.19.2"
   },
   "engines": {
     "node": ">=18.0.0"

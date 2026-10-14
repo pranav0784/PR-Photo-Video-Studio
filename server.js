@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Static files middleware to serve index.html, style.css, app.js
+// Static files middleware (serves index.html, style.css, app.js)
 app.use(express.static(path.join(__dirname)));
 
 app.get('/', (req, res) => {
@@ -12,5 +12,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🚀 Quantum AI Ultra Studio Server running on port ${PORT}`);
+    console.log(`🚀 Quantum Ultra Pro Studio Server running on port ${PORT}`);
 });

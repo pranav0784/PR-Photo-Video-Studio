@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Quantum AI Pro Studio & Multimedia Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loadingOverlay">
+        <div class="spinner"></div>
+        <div id="loadingText" style="margin-top: 15px; font-weight: bold; color: var(--accent-cyan);">Processing AI Neural Engine...</div>
+    </div>
+
+    <div id="aiStatusToast">✨ AI Neural Magic Applied</div>
+
+    <div class="app-container">
+        <!-- Top Header -->
+        <div class="top-header">
+            <div class="logo-title">⚡ QUANTUM AI ULTRA STUDIO</div>
+            <div class="header-tools">
+                <button class="tool-chip" onclick="document.getElementById('fileInputUploader').click()">📂 Open Media</button>
+                <input type="file" id="fileInputUploader" accept="image/*,video/*" onchange="handleFileLoad(this)">
+                <button class="tool-chip" onclick="downloadMasterpiece()" style="background:var(--accent-green); color:#000; border:none;">💾 Export HD</button>
+            </div>
+        </div>
+
+        <!-- Main Workspace Viewport -->
+        <div class="workspace" id="workspaceArea">
+            <video id="videoViewport" controls playsinline style="display:none; max-width:100%; max-height:100%;"></video>
+            <canvas id="canvasViewport"></canvas>
+            <!-- Real-time Text Overlay Container for Reels -->
+            <div id="textOverlayContainer" style="position:absolute; top:20%; left:50%; transform:translateX(-50%); display:none; pointer-events:auto; cursor:move;">
+                <h1 id="draggableText" style="color:#fff; font-size:2.5rem; text-shadow:0 0 15px #00f0ff, 0 0 30px #b000ff; font-weight:900; text-align:center;">🔥 Quantum Reels 30+</h1>
+            </div>
+        </div>
+
+        <!-- Bottom Control Panel -->
+        <div class="control-panel">
+            <div class="mode-selector">
+                <button class="mode-tab active" onclick="switchMode('camera')">📷 Pro Cam</button>
+                <button class="mode-tab" onclick="switchMode('ai-clarity')">✨ AI Clarity</button>
+                <button class="mode-tab" onclick="switchMode('moon-zoom')">🌕 Moon 50x</button>
+                <button class="mode-tab" onclick="switchMode('eraser')">🪄 Magic Eraser</button>
+                <button class="mode-tab" onclick="switchMode('video-tools')">🎬 Video & Plate Eraser</button>
+                <button class="mode-tab" onclick="switchMode('reels-text')">🔥 Reels Fonts</button>
+                <button class="mode-tab" onclick="switchMode('sketch')">🎨 Sketch</button>
+            </div>
+
+            <!-- Contextual Action Tray -->
+            <div class="tools-tray" id="toolsTray">
+                <button class="action-btn" onclick="startDeviceCamera()">🔴 Start Camera</button>
+                <button class="action-btn ai-glow" onclick="captureSnapshot()">📸 Capture Frame</button>
+                <button class="action-btn" onclick="applySuperMoonEnhance()">🌕 Moon Astrophotography</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

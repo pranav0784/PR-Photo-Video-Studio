@@ -1,7 +1,7 @@
 {
-  "name": "quantum-ai-ultra-studio",
-  "version": "1.0.0",
-  "description": "Next-Gen AI Photo, Video, Number Plate Eraser & Reels Studio",
+  "name": "quantum-ultra-pro-studio",
+  "version": "2.0.0",
+  "description": "Next-Gen AI Photo & Video Studio with Night Sight, Moon Zoom & CapCut UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
